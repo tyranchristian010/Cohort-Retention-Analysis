@@ -1,6 +1,6 @@
 --Overview of the the online_retail table
 SELECT 
-	   [InvoiceNo]
+       [InvoiceNo]
       ,[StockCode]
       ,[Description]
       ,[Quantity]
@@ -11,7 +11,7 @@ SELECT
 FROM [PortfolioProjects].[dbo].[online_retail];
 
 
---Remove Bad Records
+--Remove BadÂ Records
 --Filter the result set to exclude records where the customerID is blank. 
 SELECT 
 	*
@@ -21,7 +21,7 @@ WHERE CustomerID ! ='';
 
 --Check for Duplicate Rows
 --Utilize Common Table Expressions (CTE's), and apply a query to filter for the relevant records.
---Pass clean data to a temp table
+--Pass clean data to a tempÂ table
 ;WITH retail AS (
 SELECT 
 	*
@@ -55,7 +55,7 @@ SELECT * FROM #online_retail_clean;
 
 --COHORT ANALYSIS
 --The unique identifier (CustomerID) will be obtained and linked to the date of the first purchase (First Invoice Date).
---Pass data into a temp table (#cohort)
+--Pass data into a tempÂ table (#cohort)
 SELECT
 	CustomerID,
 	min(CAST( InvoiceDate AS Date)) AS first_purchase_date,
@@ -64,7 +64,7 @@ INTO #cohort
 FROM #online_retail_clean
 GROUP BY CustomerID;
 
---Calculate Cohort Index
+--Calculate CohortÂ Index
 --Join the #online_retail_clean and #cohort tables on CustomerID. 
 --Retrieve the invoice dates and the cohort dates from each table
 ;WITH CTE AS(
@@ -100,8 +100,8 @@ FROM cte2
 SELECT * FROM #cohorts_retention;
 
 SELECT DISTINCT customerID,
-				Cohort_Date,
-				cohort_index
+		Cohort_Date,
+		cohort_index
 FROM #cohorts_retention
 ORDER BY CustomerID,cohort_index;
 
