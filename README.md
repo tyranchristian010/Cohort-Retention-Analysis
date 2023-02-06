@@ -1,7 +1,7 @@
 # Cohort-Retention-Analysis
-In this project, we will conduct an analysis of an online retail dataset by executing a retention cohort analysis through the use of SQL and Tableau. A cohort is a group of individuals who have undergone a common experience within a specific time frame. Cohort Analysis is a valuable technique that enables the extraction of actionable insights related to customer churn, product engagement, product value, and other relevant metrics. Regardless of the technology or domain, Cohort Analysis provides robust data evaluation capabilities. We will employ a variety of SQL techniques in order to:
+A cohort analysis of an online retail dataset was conducted using SQL to understand customers' trends and patterns over time. Cohort Analysis is a form of behavioral analytics that takes data from a given subset, and breaks it down into related groups. The project aims to demonstrate the implementation of the following skills:
 
-* Handle missing values 
+* Handling missing values 
 * Extract Month from date
 * Assign cohort to a transaction 
 * Assigning cohort Index to each transaction 
