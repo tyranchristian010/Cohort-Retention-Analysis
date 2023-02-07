@@ -2,7 +2,7 @@
 A cohort analysis of an online retail dataset was conducted using SQL to understand customers' trends and patterns over time. Cohort Analysis is a form of behavioral analytics that takes data from a given subset, and breaks it down into related groups. The project aims to demonstrate the implementation of the following skills:
 
 * Handling missing values 
-* Extract Month from date
+* Extracting Month from date
 * Assign cohort to a transaction 
 * Assigning cohort Index to each transaction 
 * Create cohort table for retention rate 
